@@ -1,1 +1,24 @@
-<p>basic-pages works!</p>,
+<section class="my-8">
+  <h2 class="text-3xl font-bold mb-4 text-center">Basic Stats</h2>
+</section>
+
+
+<div class="stats stats-vertical shadow">
+  <div class="stat">
+    <div class="stat-title">Lowercase pipe</div>
+    <div class="stat-value">{{ nameUpper() | lowercase }}</div>
+    <div class="stat-desc">{{ nameUpper() }}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Uppercase pipe</div>
+    <div class="stat-value">{{ nameLower() | uppercase }}</div>
+    <div class="stat-desc">{{ nameLower() }}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Full Name pipe</div>
+    <div class="stat-value">{{ fullName() | titlecase }}</div>
+    <div class="stat-desc">{{ fullName() }}</div>
+  </div>
+</div>
