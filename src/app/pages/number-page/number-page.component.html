@@ -1,1 +1,29 @@
-<p>number-page-component works!</p>,
+<section class="my-8">
+  <h2 class="text-3xl font-bold mb-4 text-center">Numbers Stats</h2>
+</section>
+
+<div class="stats stats-vertical shadow">
+  <div class="stat">
+    <div class="stat-title">Number: '1. 2 - 2'</div>
+    <div class="stat-value">{{ totalSells() | number: "1.2-2" }}</div>
+    <div class="stat-desc">{{ totalSells() }}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Number: '1. 1 - 2'</div>
+    <div class="stat-value">{{ totalSells() + 1234 | number: "1.1-2" }}</div>
+    <div class="stat-desc">{{ totalSells() }}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Currency</div>
+    <div class="stat-value">{{ totalSells() | currency: "DOP" }}</div>
+    <div class="stat-desc">{{ totalSells() }}</div>
+  </div>
+
+    <div class="stat">
+    <div class="stat-title">Percent</div>
+    <div class="stat-value">{{ percent() | percent: "1.0-2" }}</div>
+    <div class="stat-desc">{{ percent() }}</div>
+  </div>
+</div>

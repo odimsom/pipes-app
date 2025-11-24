@@ -1,4 +1,4 @@
-<div class="navbar bg-base-100 shadow-lg">
+<div class="navbar bg-base-100 shadow-lg fixed top-0 z-10">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -17,7 +17,7 @@
       </div>
       <ul
         tabindex="0"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         @for (route of routes; track route.path) {
           <li>
             <a [routerLink]="route.path" class="text-sm font-medium">
@@ -42,5 +42,29 @@
         </li>
       }
     </ul>
+  </div>
+  <div class="navbar-end pr-4">
+    <div class="flex items-center gap-3 ">
+      <span class="text-sm text-accent hover:text-warning">Lenguaje actual</span>
+      <span class="badge badge-info">{{ currentLang || 'es' }}</span>
+
+      <button
+        type="button"
+        class="btn btn-sm btn-ghost"
+        [class.btn-secondary]="currentLang === 'en'"
+        [class.text-primary]="currentLang === 'en'"
+        (click)="setLanguage('en')">
+        English
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-sm btn-ghost"
+        [class.btn-secondary]="currentLang === 'es'"
+        [class.text-primary]="currentLang === 'es'"
+        (click)="setLanguage('es')">
+        Español
+      </button>
+    </div>
   </div>
 </div>

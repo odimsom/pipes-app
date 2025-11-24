@@ -2,8 +2,7 @@
   <h2 class="text-3xl font-bold mb-4 text-center">Basic Stats</h2>
 </section>
 
-
-<div class="stats stats-vertical shadow">
+<div class="stats stats-vertical shadow w-full border border-gray-100">
   <div class="stat">
     <div class="stat-title">Lowercase pipe</div>
     <div class="stat-value">{{ nameUpper() | lowercase }}</div>
@@ -20,5 +19,51 @@
     <div class="stat-title">Full Name pipe</div>
     <div class="stat-value">{{ fullName() | titlecase }}</div>
     <div class="stat-desc">{{ fullName() }}</div>
+  </div>
+</div>
+
+<section class="my-8">
+  <h2 class="text-3xl font-bold mb-4 text-center">Dates Stats</h2>
+</section>
+
+<div class="stats border border-gray-100 w-full">
+  <div class="stats stats-vertical shadow w-full">
+    <div class="stat">
+      <div class="stat-title">Date|long|GMT-6</div>
+      <div class="stat-value">{{ Date() | date : 'long' : 'GMT-6' }}</div>
+      <div class="stat-desc">{{ Date() }}</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-title">Date pipe</div>
+      <div class="stat-value">{{ Date() | date }}</div>
+      <div class="stat-desc">{{ Date() }}</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-title">Date|short|GMT-6</div>
+      <div class="stat-value">{{ Date() | date : 'short' : 'GMT-6' }}</div>
+      <div class="stat-desc">{{ Date() }}</div>
+    </div>
+
+    <div class="stats stats-vertical shadow w-full">
+      <div class="stat">
+        <div class="stat-title">Date|dd|mm|yy</div>
+        <div class="stat-value">{{ Date() | date : 'dd/mm/yy' }}</div>
+        <div class="stat-desc">{{ Date() }}</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-title">Date|hh|mm|ss</div>
+        <div class="stat-value">{{ Date() | date : 'hh:mm:ss' }}</div>
+        <div class="stat-desc">{{ Date() }}</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-title">Date|EEEE d|MMMM|</div>
+        <div class="stat-value">{{ Date() | date : "EEEE d 'de' MMMM" }}</div>
+        <div class="stat-desc">{{ Date() }}</div>
+      </div>
+    </div>
   </div>
 </div>
