@@ -16,10 +16,6 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideRouter(routes),
 
-
-
-
-
     {
       provide: LOCALE_ID,
       // useValue: 'es'
